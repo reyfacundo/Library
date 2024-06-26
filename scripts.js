@@ -1,11 +1,6 @@
 const myLibrary = [{ title: "Harry Potter", name: "J.K Rowling", pages: 332, read: "yes" }];
 console.log(myLibrary)
 
-// myLibrary.forEach(e => {
-//     displayBook(e.name, e.title, e.pages, e.read);
-// });
-
-
 function Book(name, title, pages, read) {
     this.name = name;
     this.title = title;
@@ -36,14 +31,10 @@ function displayBook() {
         const randomColor = chosenColors[randomIndex];
 
         const container = document.querySelector('#container');
-
         const cardContainer = document.createElement("div");
-
         const remove = document.createElement("button");
-
         const div = document.createElement("div");
         const lighting = document.createElement("div");
-        // const button = document.createElement("button");
         const bookInfo = document.createElement("h2");
 
 
@@ -53,26 +44,16 @@ function displayBook() {
         remove.textContent = "X";
         div.dataset.number = index;
         bookInfo.dataset.number = index;
-
         div.classList.add("card");
         div.style.height = randomHeight + 'px';
         div.style.width = randomWidth + 'px';
         div.style.backgroundColor = randomColor
-        // button.setAttribute("type", "button");
-        // button.textContent = "Remove Book";
-        // button.classList.add("cardButton");
-        // button.dataset.number = index;
         bookInfo.classList.add("bookInfo");
-        // bookInfo.textContent = `${book.title}, Author: ${book.name}, Total pages: ${book.pages}, Read? ${book.read}`;
         bookInfo.textContent = `${book.title}.`;
-
         lighting.classList.add("lighting-effect");
 
         div.appendChild(bookInfo);
-        // div.appendChild(button);
         div.appendChild(lighting)
-        // container.appendChild(div);
-
         cardContainer.appendChild(remove)
         container.appendChild(cardContainer);
         cardContainer.appendChild(div);
