@@ -1,0 +1,321 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+}
+
+body {
+    font-family: "Literata", serif;
+    margin: 0;
+    background-color: #df7c7c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5rem;
+    align-items: center;
+    color: white;
+    height: 100vh;
+}
+
+.shelf-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.shelf {
+    height: 60px;
+    border-radius: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #c2a783;
+    border-bottom: 30px solid #9e7f67;
+}
+
+.holders-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.holders {
+    height: 100px;
+    width: 100px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 60px solid #686464;
+}
+
+.dialog form span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #6d1616;
+    justify-content: center;
+    height: 100%;
+    gap: 3rem;
+    position: relative;
+}
+
+form input{
+    background-color: #d85353;
+    border: 2px solid #811a1a;
+    border-radius: 7px;
+}
+form span{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: bold;
+}
+form input:focus{
+    outline: 2px solid #811a1a;
+    border: none;
+    background-color: #b92d2d;
+
+}
+.yesno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#close{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    color: #b92d2d;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #fdc674;
+    width: 60px;
+    height: 40px;
+    border-radius: 1px;
+    cursor: pointer;
+	border-top: 25px solid transparent;
+	border-right: 20px solid #f15b5b;
+	border-bottom: 20px solid transparent;
+}
+#close:hover{
+    background-color: #e0a35e;
+}
+#addBook{
+    cursor: pointer;
+    border: none;
+    background-color: #fdc674;
+    width: 100%;
+    padding: 15px;
+    color: #b92d2d;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+#addBook:hover{
+    background-color: #e7b366;
+
+}
+
+#dialog {
+    width: 500px;
+    height: 70%;
+    background-color: #f15b5b;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    box-shadow: 7px 5px 0px 5px rgb(214, 208, 208), 10px 11px 0px 8px brown;
+}
+
+#container {
+    gap: 2px;
+    width: 85%;
+    height: 60%;
+    display: flex;
+}
+
+.card {
+    align-self: flex-end;
+    border-radius: 7px 7px 0 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.card:hover{
+    transform: scale(1.01);
+    filter: brightness(93%);
+}
+
+.bookInfo{
+    border-bottom: 20px solid #eeb662;
+    overflow:hidden;
+    height: 60%;
+    width: 100%;
+    padding-top: 20px;
+    font-size: 1.5rem;
+    text-transform:uppercase;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.lighting-effect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.13);
+    pointer-events: none; 
+}
+
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.cardButton{
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 10px solid #df7c7c;
+    border-bottom: none;
+    background-color: #dd4444;
+    width: 15%;
+    height: 30px;
+    align-self: flex-end;
+    margin-right: 13px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding-top: 2px;
+    color: #8f2626;
+}
+.cardButton:hover{
+    background-color: rgb(201, 60, 60);
+}
+
+#bookDialog{
+    height: 70%;
+    width: 50%;
+    grid-template-columns: 1fr 10px 1fr;
+    border-right: 8px solid #943434;
+    border-left: 8px solid #943434;
+    border-top: 2px solid #943434;
+    border-bottom: 2px solid #943434;
+    display: none;
+    position: absolute;
+    z-index: 3;
+}
+#closeBookDialog{
+    position: absolute;
+    margin-left: 20px;
+    background-color: #fdc674;
+    color: #943434;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    height: 60px;
+    border-left: 13px solid transparent;
+	border-right: 13px solid transparent;
+	border-bottom: 20px solid #d6d6d6;
+    border-top:none;
+    cursor: pointer;
+}
+#closeBookDialog:hover{
+    background-color: #dfab5e;;
+}
+.pageOne{
+    background-color: #d6d6d6;
+}
+.pageTwo{
+    background-color: #f5f3f3;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mid{
+    background-color: #b63939;
+}
+
+#bookTitle{
+    width: 400px;
+    overflow-wrap: break-word;
+    text-align: center;
+    height: fit-content;
+    font-size: 3.3rem;
+}
+#authorName{
+    width: 400px;
+    height: fit-content;
+    overflow-wrap: break-word;
+    text-align: center;
+    font-size: 1.7rem;
+}
+#readStatus{
+    font-family: "Fredericka the Great", serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    transform: rotate(-10deg);
+    padding-top: 120px;
+}
+
+#open{
+    background-color: transparent;
+    position: relative;
+    border: none;
+    height: fit-content;
+    cursor: pointer;
+}
+#open span{
+    font-size: 4rem;
+    color: rgb(77, 76, 80);
+}
+#open:hover{
+    transform: scale(1.2);
+}
+.plus{
+    font-weight: bolder;
+    color: rgb(238, 49, 49);
+    position: absolute;
+    right: -7px;
+    top: -2px;
+    font-size: 2.3rem;
+}
+.overlay{
+    position: fixed; 
+    display: none; 
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(43, 25, 25, 0.356); 
+    z-index: 2;
+}

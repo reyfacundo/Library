@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Library</title>
+</head>
+
+<body>
+    <button id="open"><span class="material-symbols-outlined">
+        menu_book
+        </span>
+    <div class="plus">+</div></button>
+    <div id="container">
+        <div class="line"></div>
+    </div>
+    <dialog id="dialog">
+        <form action="" id="form">
+            <span class="author">
+                <label for="author">Author</label>
+                <input type="text" id="author" required>
+            </span>
+
+            <span class="title">
+                <label for="title">Book Title</label>
+                <input type="text" id="title" required>
+            </span>
+            <span class="pages">
+                <label for="pages">Number of Pages</label>
+                <input type="number" id="pages" required>
+            </span>
+            <span class="yesno">
+                <label for="read">Have you read it?</label>
+                <span class="options">
+                    <label for="read">YES</label>
+                    <input type="radio" id="read" name="read" value="yes" checked>
+                    <label for="notRead">NO</label>
+                    <input type="radio" id="notRead" name="read" value="no">
+                </span>
+            </span>
+                <button type="submit" id="addBook">ADD</button>
+                <button id="close" type="button">X</button>
+        </form>
+    </dialog>
+    <div class="shelf-container">
+        <div class="shelf"></div>
+        <div class="holders-container">
+            <div class="holders"></div>
+            <div class="holders"></div>
+        </div>
+
+    </div>
+    <div class="overlay"></div>
+    <dialog id="bookDialog">
+        <div class="pageOne">
+            <button id="closeBookDialog">X</button>
+        </div>
+        <div class="mid"></div>
+        <div class="pageTwo">
+            <h1 id="bookTitle"></h1>
+            <h2 id="authorName"></h2>
+            <h3 id="totalPages"></h3>
+            <h4 id="readStatus"></h4>
+        </div>
+    </dialog>
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
