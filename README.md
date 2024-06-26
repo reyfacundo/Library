@@ -3,7 +3,8 @@ https://reyfacundo.github.io/Library/
 ***
 * Missing some text to notify the user where to click in order to change the Read Status.<br>
 * Missing logic to change the status of hard-coded books ( The first one ).<br>
-* Could make the shelf grow with the ammount of books to give a more cohesive look.
+* Could make the shelf grow with the ammount of books to give a more cohesive look.<br>
+* Change radio buttons styling.
 ***
 
 
